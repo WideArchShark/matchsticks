@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
     public MatchValues matchCountListener;
     public OptionsButton OptionsButtonListener;
 
-    [HideInInspector] public GameState loadMatchesState;
-    [HideInInspector] public GameState playerTurnState;
-    [HideInInspector] public GameState computerTurnState;
+    [HideInInspector] public GameState loadMatchesState = new LoadMatchesState();
+    [HideInInspector] public GameState playerTurnState = new PlayerTurnState();
+    [HideInInspector] public GameState computerTurnState = new ComputerTurnState();
     private GameState currentState;
 
     public List<GameObject> matches;
@@ -28,10 +28,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loadMatchesState = ScriptableObject.CreateInstance<LoadMatchesState>();
-        playerTurnState = ScriptableObject.CreateInstance<PlayerTurnState>();
-        computerTurnState = ScriptableObject.CreateInstance<ComputerTurnState>();
-
         matchCountListener += MatchesUpdated;
         currentState = loadMatchesState;
         currentState.StartState(this);

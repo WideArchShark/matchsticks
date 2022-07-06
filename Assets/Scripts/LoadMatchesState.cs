@@ -27,7 +27,7 @@ public class LoadMatchesState : GameState
 
         for (int i = 0; i < matchCount; i++)
         {
-            GameObject match = Instantiate(gameManager.matchPrefab, new Vector3(0, 6 + (i * 0.4f), 0), Random.rotation);
+            GameObject match = GameObject.Instantiate(gameManager.matchPrefab, new Vector3(0, 6 + (i * 0.4f), 0), Random.rotation);
             gameManager.matches.Add(match);
         }
 

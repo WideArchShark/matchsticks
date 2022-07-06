@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GameState : ScriptableObject {
+public abstract class GameState {
     public abstract void StartState(GameManager gameManager);
 
     public abstract void UpdateState(GameManager gameManager);

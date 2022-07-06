@@ -6,10 +6,7 @@ public class PlayerTurnState : GameState
 {
     private Button button1, button2, button3;
 
-    public override void LostState(GameManager gameManager)
-    {
-        // throw new System.NotImplementedException();
-    }
+    public override void LostState(GameManager gameManager) { }
 
     public override void StartState(GameManager gameManager)
     {
@@ -45,7 +42,7 @@ public class PlayerTurnState : GameState
 
         for (int i = 0; i < value; i++)
         {
-            Destroy(gameManager.matches[0]);
+            GameObject.Destroy(gameManager.matches[0]);
             gameManager.matches.RemoveAt(0);
         }
 
@@ -64,8 +61,5 @@ public class PlayerTurnState : GameState
         }
     }
 
-    public override void UpdateState(GameManager gameManager)
-    {
-        // throw new System.NotImplementedException();
-    }
+    public override void UpdateState(GameManager gameManager) { }
 }

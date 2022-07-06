@@ -23,7 +23,7 @@ public class ComputerTurnState : GameState
 
         for (int i = 0; i < matchesToRemove; i++)
         {
-            Destroy(gameManager.matches[0]);
+            GameObject.Destroy(gameManager.matches[0]);
             gameManager.matches.RemoveAt(0);
         }
 
